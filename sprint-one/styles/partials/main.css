@@ -1,0 +1,221 @@
+@font-face {
+  font-family: "Avenir Next";
+  src: url("./../../assets/_GlobalFont/Fonts/Linotype - AvenirNextLTPro-Bold.otf") format("opentype");
+  font-style: normal;
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Avenir Next";
+  src: url("./../../assets/_GlobalFont/Fonts/Linotype - AvenirNextLTPro-Demi.otf") format("opentype");
+  font-style: normal;
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Avenir Next";
+  src: url("./../../assets/_GlobalFont/Fonts/Linotype - AvenirNextLTPro-Regular.otf") format("opentype");
+  font-style: normal;
+  font-weight: 400;
+}
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Avenir Next", "sans-serif";
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.header {
+  width: 100%;
+}
+.header__menu {
+  background-color: #323232;
+  color: #fff;
+  font-size: 0.813rem;
+  height: 80px;
+}
+.header__logo {
+  text-align: center;
+  padding-top: 10px;
+  text-transform: uppercase;
+}
+.header__list {
+  height: 40px;
+}
+.header__links {
+  display: flex;
+  justify-content: space-around;
+}
+
+.hero {
+  width: 100vw;
+  height: 50vw;
+}
+@media screen and (min-width: 768px) {
+  .hero {
+    width: 100vw;
+    height: 50vw;
+  }
+}
+.hero__image {
+  background-image: url("../../assets/Images/hero.jpg");
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 50vw;
+}
+@media screen and (min-width: 768px) {
+  .hero__image {
+    width: 100%;
+    height: 50vw;
+  }
+}
+.hero__image h1 {
+  color: #fff;
+  font-size: 2rem;
+  text-align: left;
+  margin-left: 0.625rem;
+}
+@media screen and (min-width: 768px) {
+  .hero__image h1 {
+    font-size: 3.75rem;
+    margin-left: 1.5rem;
+  }
+}
+
+.musician {
+  padding: 2rem 1rem;
+}
+.musician h2 {
+  font-size: 22px;
+}
+@media screen and (min-width: 768px) {
+  .musician h2 {
+    font-size: 44px;
+  }
+}
+.musician__image {
+  width: 288px;
+  height: 145px;
+  margin-bottom: 24px;
+}
+@media screen and (min-width: 768px) {
+  .musician__image {
+    width: 720px;
+    height: 362px;
+    margin-bottom: 24px;
+  }
+}
+.musician__quote {
+  font-weight: 700;
+  font-size: 14px;
+}
+@media screen and (min-width: 768px) {
+  .musician__quote {
+    font-weight: 700;
+    font-size: 24px;
+  }
+}
+.musician__info {
+  font-weight: 300;
+  font-size: 14px;
+}
+@media screen and (min-width: 768px) {
+  .musician__info {
+    font-size: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .musician__info p {
+    margin-right: 24px;
+  }
+}
+
+.gallery {
+  padding: 32px 16px;
+}
+@media screen and (min-width: 768px) {
+  .gallery {
+    padding: 32px 0 32px 24px;
+  }
+}
+.gallery h2 {
+  font-size: 22px;
+  margin-bottom: 24px;
+}
+@media screen and (min-width: 768px) {
+  .gallery h2 {
+    font-size: 36px;
+    margin-bottom: 60px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .gallery__items {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+.gallery__image {
+  width: 288px;
+  height: 145px;
+  margin-bottom: 16px;
+}
+@media screen and (min-width: 768px) {
+  .gallery__image {
+    width: 224px;
+    height: 126px;
+    margin-bottom: 24px;
+    margin-right: 24px;
+    box-sizing: border-box;
+  }
+}
+
+.footer {
+  padding: 32px 16px;
+  background-color: #323232;
+  color: #fff;
+}
+@media screen and (min-width: 768px) {
+  .footer {
+    padding: 32px 30px;
+  }
+}
+.footer h2 {
+  font-size: 22px;
+  margin-top: 24px;
+}
+@media screen and (min-width: 768px) {
+  .footer h2 {
+    font-size: 36px;
+  }
+}
+.footer h2__icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 30%;
+  margin-bottom: 32px;
+}
+.footer h2__icon {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+@media screen and (min-width: 768px) {
+  .footer h2__labels {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 224px;
+  }
+}/*# sourceMappingURL=main.css.map */
