@@ -1,11 +1,17 @@
 $tablet-breakpoint: 768px;
-$desktop-breakpoint: 1280px;
+$desktop-breakpoint: 1440px;
 
-$big-header: 1.5rem;
-$medium-header: 0.875rem;
-$small-header: 0.813rem;
-$tiny-header: 0.75rem;
+$header-mobile: 1.5rem;
+$sub-header-mobile: 0.875rem;
+$text-mobile: 0.8125rem;
+$labels-mobile: 0.75rem;
 
-$paragraph_-text: 0.813rem;
-$lists-text: 0.813rem;
-$contact-text: 0.813rem;
+$header-tablet: 3.75rem;
+$second-header-tablet: 2.25rem;
+$third-header-tablet: 1.5rem;
+$sub-header-tablet: 1rem;
+$text-tablet: 0.875rem;
+$labels-tablet: 0.75rem;
+
+$color-black: #323232;
+$color-white: #fff;

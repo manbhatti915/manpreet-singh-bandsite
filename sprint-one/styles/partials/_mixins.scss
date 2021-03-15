@@ -11,3 +11,21 @@
 		@content;
 	}
 }
+
+@mixin flex-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@mixin body-style {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: "Avenir Next", "sans-serif";
+}
+
+@mixin reset-list {
+	list-style-type: none;
+	padding: 0;
+}
