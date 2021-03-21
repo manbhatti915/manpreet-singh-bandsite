@@ -1,0 +1,207 @@
+@font-face {
+  font-family: "Avenir Next";
+  src: url("./../../assets/_GlobalFont/Fonts/Linotype - AvenirNextLTPro-Bold.otf") format("opentype");
+  font-style: normal;
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Avenir Next";
+  src: url("./../../assets/_GlobalFont/Fonts/Linotype - AvenirNextLTPro-Demi.otf") format("opentype");
+  font-style: normal;
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Avenir Next";
+  src: url("./../../assets/_GlobalFont/Fonts/Linotype - AvenirNextLTPro-Regular.otf") format("opentype");
+  font-style: normal;
+  font-weight: 400;
+}
+.track, .track__overlay {
+  width: 100vw;
+  height: 147.5vw;
+}
+@media screen and (min-width: 768px) {
+  .track, .track__overlay {
+    width: 100vw;
+    height: 87.239vw;
+  }
+}
+.track__overlay {
+  background-image: url("./../assets/Images/shows_hero.jpg");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  align-items: center;
+  padding-left: 1.5rem;
+}
+.track__hero {
+  display: flex;
+  height: 670px;
+  flex-direction: column;
+}
+.track iframe, .track__overlay iframe {
+  width: 60%;
+  height: 200px;
+}
+.track__overlay {
+  position: relative;
+}
+.track__overlay::after {
+  content: "";
+  display: block;
+  background-color: #323232;
+  opacity: 0.5;
+  width: 100vw;
+  height: 147.5vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+@media screen and (min-width: 768px) {
+  .track__overlay::after {
+    height: 87.239vw;
+  }
+}
+.track__overlay > * {
+  z-index: 5;
+  position: relative;
+}
+
+.shows {
+  width: 100%;
+  background-color: #fff;
+  padding: 2rem 1rem;
+}
+@media screen and (min-width: 768px) {
+  .shows {
+    width: 93.75%;
+    padding: 2rem 1.5rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .shows {
+    padding: 3rem 11.25rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+.shows__heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+@media screen and (min-width: 768px) {
+  .shows__heading {
+    font-size: 2.25rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .shows__heading {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    font-size: 3.75rem;
+  }
+}
+.shows__tablet {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .shows__tablet {
+    display: flex;
+    color: #afafaf;
+    font-weight: 600;
+    justify-content: space-between;
+    width: 67%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .shows__desktop {
+    width: 736px;
+  }
+}
+.shows__first, .shows__second, .shows__third, .shows__fourth, .shows__fifth, .shows__sixth {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .shows__first, .shows__second, .shows__third, .shows__fourth, .shows__fifth, .shows__sixth {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 0;
+    border-bottom: 1px solid #afafaf;
+  }
+}
+.shows__date {
+  margin-bottom: 24px;
+}
+.shows__date p:nth-child(odd) {
+  margin-top: 0;
+  color: #afafaf;
+  font-weight: 600;
+}
+@media screen and (min-width: 768px) {
+  .shows__date p:nth-child(odd) {
+    display: none;
+  }
+}
+.shows__date p:nth-child(even) {
+  font-weight: 600;
+}
+.shows__venue {
+  margin-bottom: 24px;
+}
+.shows__venue p:nth-child(odd) {
+  margin-top: 0;
+  color: #afafaf;
+  font-weight: 600;
+}
+@media screen and (min-width: 768px) {
+  .shows__venue p:nth-child(odd) {
+    display: none;
+  }
+}
+.shows__location {
+  margin-bottom: 32px;
+}
+.shows__location p:nth-child(odd) {
+  margin-top: 0;
+  color: #afafaf;
+  font-weight: 600;
+}
+@media screen and (min-width: 768px) {
+  .shows__location p:nth-child(odd) {
+    display: none;
+  }
+}
+.shows__tickets {
+  margin-top: 0;
+}
+.shows__tickets button {
+  border: none;
+  padding: 0;
+  text-align: center;
+  width: 288px;
+  height: 48px;
+  font-weight: 600;
+  border-radius: 4px;
+  text-transform: uppercase;
+  background-color: #323232;
+  color: #fff;
+}
+@media screen and (min-width: 768px) {
+  .shows__tickets button {
+    width: 168px;
+    height: 55px;
+  }
+}/*# sourceMappingURL=shows.css.map */

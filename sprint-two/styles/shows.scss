@@ -1,0 +1,192 @@
+@use './partials/typography' as *;
+@use './partials/variables' as *;
+@use './partials/mixins' as *;
+
+.track {
+	width: 100vw;
+	height: 147.5vw;
+
+	@include tablet {
+		width: 100vw;
+		height: 87.239vw;
+	}
+	&__overlay {
+		background-image: url("./../assets/Images/shows_hero.jpg");
+		background-position: center;
+		background-size: cover;
+		@extend .track;
+		display: flex;
+		flex-direction: column;
+		color: $color-white;
+		align-items: center;
+		padding-left: 1.5rem;
+	}
+
+	&__hero {
+		display: flex;
+		height: 670px;
+		flex-direction: column;
+	}
+	iframe {
+		width: 60%;
+		height: 200px;
+	}
+
+	&__overlay {
+		position: relative;
+	}
+
+	&__overlay::after {
+		content: "";
+		display: block;
+		background-color: $color-black;
+		opacity: 0.5;
+		width: 100vw;
+		height: 147.5vw;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 0;
+		@include tablet {
+			height: 87.239vw;
+		}
+	}
+
+	&__overlay > * {
+		z-index: 5;
+		position: relative;
+	}
+}
+
+.shows {
+	width: 100%;
+	background-color: $color-white;
+	padding: 2rem 1rem;
+	@include tablet {
+		width: 93.75%;
+		padding: 2rem 1.5rem;
+	}
+	@include desktop {
+		padding: 3rem 11.25rem;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		width: 70%;
+		margin: 0 auto;
+	}
+
+	&__heading {
+		font-size: $header-mobile;
+		font-weight: 700;
+		margin-top: 0;
+		margin-bottom: 1.5rem;
+
+		@include tablet {
+			font-size: $second-header-tablet;
+		}
+
+		@include desktop {
+			margin-top: 3rem;
+			margin-bottom: 3rem;
+			font-size: $header-tablet;
+		}
+	}
+
+	&__tablet {
+		display: none;
+		@include tablet {
+			display: flex;
+			color: $color-silver;
+			font-weight: 600;
+			justify-content: space-between;
+			width: 67%;
+			// align-items: center;
+			p {
+				// width: 33%;
+			}
+		}
+	}
+	&__desktop {
+		@include desktop {
+			width: 736px;
+			// margin-left: 276px;
+		}
+	}
+	&__first,
+	&__second,
+	&__third,
+	&__fourth,
+	&__fifth,
+	&__sixth {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		padding-top: 2rem;
+		padding-bottom: 1rem;
+		@include tablet {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			padding-bottom: 0;
+			border-bottom: 1px solid $color-silver;
+		}
+	}
+	&__date {
+		margin-bottom: 24px;
+		p:nth-child(odd) {
+			margin-top: 0;
+			color: $color-silver;
+			font-weight: 600;
+			@include tablet {
+				display: none;
+			}
+		}
+		p:nth-child(even) {
+			font-weight: 600;
+		}
+	}
+
+	&__venue {
+		margin-bottom: 24px;
+
+		p:nth-child(odd) {
+			margin-top: 0;
+			color: $color-silver;
+			font-weight: 600;
+			@include tablet {
+				display: none;
+			}
+		}
+	}
+
+	&__location {
+		margin-bottom: 32px;
+		p:nth-child(odd) {
+			margin-top: 0;
+			color: $color-silver;
+			font-weight: 600;
+			@include tablet {
+				display: none;
+			}
+		}
+	}
+	&__tickets {
+		margin-top: 0;
+		button {
+			border: none;
+			padding: 0;
+			text-align: center;
+			width: 288px;
+			height: 48px;
+			font-weight: 600;
+			border-radius: 4px;
+			text-transform: uppercase;
+			background-color: $color-black;
+			color: $color-white;
+			@include tablet {
+				width: 168px;
+				height: 55px;
+			}
+		}
+	}
+}

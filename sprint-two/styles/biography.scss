@@ -1,0 +1,330 @@
+.hero {
+	width: 100vw;
+	height: 50vw;
+
+	&__overlay {
+		background-image: url("../assets/Images/hero.jpg");
+		background-position: center;
+		background-size: cover;
+		@extend .hero;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+	}
+
+	&__overlay {
+		position: relative;
+	}
+
+	&__overlay::after {
+		content: "";
+		display: block;
+		background-color: $color-black;
+		opacity: 0.5;
+		width: 100%;
+		height: 50vw;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 0;
+	}
+
+	&__overlay > * {
+		z-index: 5;
+		position: relative;
+	}
+
+	&__heading {
+		margin-top: 0;
+		margin-bottom: 0;
+		text-align: left;
+		width: 70%;
+		margin-left: 1rem;
+		color: white;
+		font-size: $header-mobile;
+		font-weight: 700;
+
+		@include tablet {
+			font-size: $header-tablet;
+			width: 70%;
+			margin-left: 1.5rem;
+		}
+
+		@include desktop {
+			width: 40%;
+			margin-left: 11.25rem;
+		}
+	}
+}
+
+.musician {
+	padding: 2rem 1rem 2.5rem;
+
+	@include tablet {
+		padding: 2rem 1.5rem 2.5rem;
+	}
+	@include desktop {
+		margin: 2.5rem 11.25rem 2.5rem;
+		padding: 0;
+	}
+
+	&__heading {
+		font-size: $header-mobile;
+		font-weight: 700;
+		margin-top: 0;
+		margin-bottom: 1.5rem;
+
+		@include tablet {
+			font-size: $second-header-tablet;
+		}
+
+		@include desktop {
+			margin-top: 3rem;
+			margin-bottom: 3rem;
+		}
+	}
+
+	&__tablet {
+		@include desktop {
+			margin-left: 5.5rem;
+			margin-right: 5.5rem;
+		}
+	}
+
+	&__image {
+		width: 90vw;
+		height: 45.312vw;
+
+		@include tablet {
+			width: 93.75vw;
+			height: 47.13vw;
+		}
+
+		@include desktop {
+			width: 62.223vw;
+			height: 31.25vw;
+		}
+	}
+
+	&__quote {
+		font-weight: 700;
+		font-size: $sub-header-mobile;
+		margin-top: 1.5rem;
+		margin-bottom: 1.5rem;
+
+		@include tablet {
+			font-weight: 700;
+			font-size: $third-header-tablet;
+		}
+
+		@include desktop {
+			margin-top: 3rem;
+			margin-bottom: 2.5rem;
+		}
+
+		p:nth-child(1) {
+			@include desktop {
+				padding-right: 7.188rem;
+			}
+		}
+
+		p:nth-child(2) {
+			margin-top: 2rem;
+			margin-bottom: 2.5rem;
+
+			@include tablet {
+				font-weight: 400;
+			}
+
+			@include desktop {
+				margin-top: 3.5rem;
+				margin-bottom: 2rem;
+			}
+		}
+	}
+
+	&__info {
+		font-weight: 300;
+		font-size: $sub-header-mobile;
+
+		@include tablet {
+			font-size: $sub-header-tablet;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+
+			p {
+				margin-right: 1.5rem;
+
+				@include desktop {
+					margin-top: 2rem;
+					margin-right: 2.5rem;
+				}
+			}
+		}
+	}
+}
+
+.gallery {
+	padding: 2rem 1rem 2.5rem;
+
+	@include tablet {
+		padding: 2rem 0 2.5rem 1.5rem;
+	}
+
+	@include desktop {
+		margin: 2.5rem 9.75rem 2.5rem;
+		padding: 0;
+	}
+
+	&__heading {
+		font-size: $header-mobile;
+		margin-bottom: 1.5rem;
+		margin-top: 0;
+
+		@include tablet {
+			font-size: $second-header-tablet;
+			margin-bottom: 3.75rem;
+		}
+
+		@include desktop {
+			margin-top: 3rem;
+		}
+	}
+
+	&__items {
+		@include tablet {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+		}
+	}
+
+	&__image {
+		width: 90vw;
+		height: 45.312vw;
+		margin-bottom: 1rem;
+
+		@include tablet {
+			width: 29.167vw;
+			height: 16.408vw;
+			margin-right: 1.5rem;
+			margin-bottom: 1.5rem;
+		}
+
+		@include desktop {
+			width: 23.889vw;
+			height: 13.403vw;
+			margin-right: 1.5rem;
+			margin-bottom: 1.5rem;
+		}
+	}
+}
+
+.form {
+	padding: 0 1rem 2.5rem;
+	&__heading {
+		font-size: $header-mobile;
+		margin-bottom: 2.5rem;
+		margin-top: 0;
+
+		@include tablet {
+			font-size: $second-header-tablet;
+		}
+	}
+	&__container {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		@include tablet {
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-start;
+			margin-left: 100px;
+			margin-right: 100px;
+		}
+	}
+	&__labels {
+		width: 230px;
+	}
+	&__image {
+		margin-top: 30px;
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		@include tablet {
+			margin-right: 16px;
+			margin-top: 28px;
+			width: 45px;
+			height: 42px;
+		}
+	}
+	&__name {
+		width: 224px;
+		display: flex;
+		flex-direction: column;
+		@include tablet {
+			width: 350px;
+		}
+		label {
+			color: $color-silver;
+			margin-bottom: 0.4rem;
+			outline: none;
+		}
+		input {
+			height: 50px;
+			@include tablet {
+				height: 35px;
+				width: 466px;
+			}
+		}
+		input:active {
+			height: 55px;
+			color: black;
+			border: 2px solid black;
+			border-radius: 4px;
+		}
+	}
+
+	&__comments {
+		width: 224px;
+		display: flex;
+		flex-direction: column;
+		margin-top: 1rem;
+		label {
+			color: $color-silver;
+			margin-bottom: 0.4rem;
+		}
+		textarea {
+			width: 208px;
+			height: 80px;
+			border-radius: 4px;
+			padding-left: 1rem;
+
+			font-family: "Avenir";
+			@include tablet {
+				width: 454px;
+			}
+		}
+	}
+	&__submit {
+		@include tablet {
+			width: 474px;
+			text-align: right;
+		}
+	}
+	&__button {
+		width: 224px;
+		margin-top: 1rem;
+		background-color: $color-black;
+		color: $color-white;
+		border-radius: 4px;
+		padding: 15px 50px;
+		border: none;
+		font-size: $text-mobile;
+		@include tablet {
+			padding: 0.625rem 0.625rem;
+			width: 150px;
+		}
+	}
+}
