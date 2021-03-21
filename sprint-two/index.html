@@ -139,22 +139,22 @@
 					<div form__images><img class="form__image" src="./assets/Images/Mohan-muruge.jpg"></div>
 					<div class ="form__labels">
 						<div class="form__name">
-							<label for="name">NAME </label>
-							<input type="text" name="name" id="name" required>
+							<label class= "form__label" for="name">NAME</label>
+							<input type="text"  class="form__input" name="name" id="name" placeholder="Enter your name here">
 						</div>
 						<div class="form__comments">
-							<label for="comments">COMMENT</label>
-
-							<textarea id="comments" class="forms__textarea" name="comments"
-									rows="5" cols="22">
-							Add a new comment
-							</textarea>
+							<label class="form__label" for="comments">COMMENT</label>
+							<textarea class="form__textarea" name="text-comments" placeholder="Add a new comment"></textarea>
 						</div>
+						
 						<div class="form__submit">
 							<button class ="form__button" type="submit">COMMENT</button>
 						</div>
 				</div>
 				  </form>
+				  <ul id="comments">
+
+				  </ul>
 			</section>
 		</main>
 
@@ -220,5 +220,6 @@
 						<p>All Rights Reserved</p>
 					</div>
 		</footer>
+	<script src="./../sprint-two/scripts/main.js"></script>
 	</body>
 </html>
