@@ -17,13 +17,19 @@
   font-weight: 400;
 }
 .track, .track__overlay {
-  width: 100%;
+  width: 100vw;
   height: 147.5vw;
 }
 @media screen and (min-width: 768px) {
   .track, .track__overlay {
     width: 100vw;
     height: 87.239vw;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .track, .track__overlay {
+    width: 100vw;
+    height: 46.667vw;
   }
 }
 .track__overlay {
@@ -43,18 +49,74 @@
   justify-content: center;
   margin-top: 32px;
 }
-.track__hero p {
+@media screen and (min-width: 768px) {
+  .track__hero {
+    padding: 3.5rem 3rem 1.5rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .track__hero {
+    padding: 6rem 11.25rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.track__album {
   margin-top: 0;
   margin-bottom: 0;
+  font-weight: 700;
 }
-.track__hero h1 {
+@media screen and (min-width: 768px) {
+  .track__album {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .track__album {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+}
+.track__heading {
   font-size: 2.25rem;
   font-weight: 700;
 }
-.track iframe, .track__overlay iframe {
+@media screen and (min-width: 768px) {
+  .track__heading {
+    font-size: 3.75rem;
+    width: 90%;
+    margin-top: 2rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .track__heading {
+    margin-top: 3rem;
+    width: 70%;
+    margin-right: 0;
+  }
+}
+.track__iframe {
   width: 288px;
   height: 100px;
   margin-top: 32px;
+  padding: 0;
+}
+@media screen and (min-width: 768px) {
+  .track__iframe {
+    width: 420px;
+    height: 146px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .track__iframe {
+    width: 436px;
+    height: 146px;
+  }
 }
 .track__overlay {
   position: relative;
@@ -74,6 +136,11 @@
 @media screen and (min-width: 768px) {
   .track__overlay::after {
     height: 87.239vw;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .track__overlay::after {
+    height: 46.667vw;
   }
 }
 .track__overlay > * {

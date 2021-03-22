@@ -21,7 +21,7 @@
   height: 50vw;
 }
 .hero__overlay {
-  background-image: url("../assets/Images/hero.jpg");
+  background-image: url("./../assets/Images/hero.jpg");
   background-position: center;
   background-size: cover;
   display: flex;
@@ -246,6 +246,11 @@
 .form {
   padding: 0 1rem 2.5rem;
 }
+@media screen and (min-width: 1440px) {
+  .form {
+    padding: 0 9.25rem 2.5rem;
+  }
+}
 .form__heading {
   font-size: 1.5rem;
   margin-bottom: 2.5rem;
@@ -270,6 +275,11 @@
     margin-right: 100px;
   }
 }
+@media screen and (min-width: 1440px) {
+  .form__container {
+    justify-content: center;
+  }
+}
 .form__labels {
   width: 230px;
 }
@@ -287,6 +297,14 @@
     height: 42px;
   }
 }
+@media screen and (min-width: 768px) {
+  .form__image {
+    margin-right: 16px;
+    margin-top: 28px;
+    width: 50px;
+    height: 50px;
+  }
+}
 .form__name {
   width: 230px;
   display: flex;
@@ -298,16 +316,21 @@
   }
 }
 .form__input {
-  color: #afafaf;
+  color: #323232;
   margin-bottom: 0.4rem;
   outline: none;
   height: 40px;
-  outline: none;
 }
 @media screen and (min-width: 768px) {
   .form__input {
     height: 40px;
     width: 466px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .form__input {
+    height: 48px;
+    margin-bottom: 1.5rem;
   }
 }
 .form__input:focus {
@@ -335,7 +358,14 @@
 }
 @media screen and (min-width: 768px) {
   .form__textarea {
-    width: 454px;
+    width: 468px;
+    outline: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  .form__textarea {
+    height: 96px;
+    outline: none;
   }
 }
 .form__textarea:focus {
@@ -360,10 +390,24 @@
   border: none;
   font-size: 0.8125rem;
   font-weight: 600;
+  outline: none;
 }
 @media screen and (min-width: 768px) {
   .form__button {
     padding: 0.625rem 0.625rem;
     width: 150px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .form__button {
+    padding: 0.625rem 0.625rem;
+    width: 160px;
+    height: 48px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .form__button {
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
   }
 }/*# sourceMappingURL=biography.css.map */

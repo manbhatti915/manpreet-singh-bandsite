@@ -1,8 +1,10 @@
+//Main div for the shows section
 const divMain = document.createElement("div");
 divMain.classList.add("shows__first");
 const shows = document.querySelector(".shows__desktop");
 shows.appendChild(divMain);
 
+// To create div for date and values
 const divDate = document.createElement("div");
 divDate.classList.add("shows__date");
 divMain.appendChild(divDate);
@@ -12,6 +14,8 @@ divDateTitle.innerText = "DATE";
 const divDateInfo = document.createElement("p");
 divDate.appendChild(divDateInfo);
 divDateInfo.innerText = "Mon Dec 17 2018";
+
+//To create div for venue and values
 
 const divVenue = document.createElement("div");
 divVenue.classList.add("shows__venue");
@@ -23,6 +27,8 @@ const divVenueInfo = document.createElement("p");
 divVenue.appendChild(divVenueInfo);
 divVenueInfo.innerText = "Ronald Lane";
 
+//To create div for location and values
+
 const divLocation = document.createElement("div");
 divLocation.classList.add("shows__location");
 divMain.appendChild(divLocation);
@@ -33,6 +39,7 @@ const divLocationInfo = document.createElement("p");
 divLocation.appendChild(divLocationInfo);
 divLocationInfo.innerText = "San Fancisco, CA";
 
+//To create div for buttons
 const divTickets = document.createElement("div");
 divTickets.classList.add("shows__tickets");
 divMain.appendChild(divTickets);
@@ -83,7 +90,7 @@ const divButton2 = document.createElement("button");
 divTickets2.appendChild(divButton2);
 divButton2.innerText = "Buy tickets";
 
-//Third MAin Div
+//Third Main Div
 const divMain3 = document.createElement("div");
 divMain3.classList.add("shows__third");
 const shows3 = document.querySelector(".shows__desktop");
