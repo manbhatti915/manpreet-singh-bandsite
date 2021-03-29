@@ -125,7 +125,7 @@
 }
 
 .shows {
-	width: 100%;
+	width: 90%;
 	background-color: $color-white;
 	padding: 2rem 1rem;
 	@include tablet {
@@ -133,12 +133,12 @@
 		padding: 2rem 1.5rem;
 	}
 	@include desktop {
-		padding: 3rem 11.25rem;
+		padding: 3rem 14.25rem;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
 		align-items: flex-start;
-		width: 90%;
+		width: 80%;
 		padding-right: 0;
 	}
 

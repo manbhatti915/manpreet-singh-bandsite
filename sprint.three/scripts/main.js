@@ -5,6 +5,7 @@ const apiUrl = "https://project-1-api.herokuapp.com";
 const apiEndpoint = "/comments";
 console.log(apiUrl + apiEndpoint + apiKey);
 
+//calling reference section from shows html file to store comments with javascript
 const commentSection = document.querySelector(".comments");
 
 const image = "./assets/Images/Mohan-muruge.jpg";
