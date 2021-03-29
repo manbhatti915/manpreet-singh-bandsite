@@ -39,8 +39,6 @@
   display: flex;
   flex-direction: column;
   color: #fff;
-  padding-left: 1rem;
-  padding-right: 1rem;
 }
 .track__hero {
   display: flex;
@@ -69,6 +67,8 @@
   margin-top: 0;
   margin-bottom: 0;
   font-weight: 700;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 @media screen and (min-width: 768px) {
   .track__album {
@@ -85,6 +85,8 @@
 .track__heading {
   font-size: 2.25rem;
   font-weight: 700;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 @media screen and (min-width: 768px) {
   .track__heading {
@@ -104,7 +106,8 @@
   width: 288px;
   height: 100px;
   margin-top: 32px;
-  padding: 0;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 @media screen and (min-width: 768px) {
   .track__iframe {
@@ -122,7 +125,7 @@
   position: relative;
 }
 .track__overlay::after {
-  content: "";
+  content: " ";
   display: block;
   background-color: #323232;
   opacity: 0.5;
@@ -163,10 +166,11 @@
   .shows {
     padding: 3rem 11.25rem;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
-    width: 70%;
-    margin: 0 auto;
+    align-items: flex-start;
+    width: 90%;
+    padding-right: 0;
   }
 }
 .shows__heading {
@@ -207,15 +211,28 @@
     width: 736px;
   }
 }
-.shows__first, .shows__second, .shows__third, .shows__fourth, .shows__fifth, .shows__sixth {
+.shows__first {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  width: 288px;
   padding-top: 2rem;
   padding-bottom: 1rem;
+  border-bottom: 1px solid #afafaf;
 }
 @media screen and (min-width: 768px) {
-  .shows__first, .shows__second, .shows__third, .shows__fourth, .shows__fifth, .shows__sixth {
+  .shows__first {
+    width: 99%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 0;
+    border-bottom: 1px solid #afafaf;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .shows__first {
+    width: 60%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;

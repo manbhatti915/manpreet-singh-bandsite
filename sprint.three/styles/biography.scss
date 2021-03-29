@@ -226,7 +226,6 @@
 }
 
 .form {
-	margin: 0 1rem 2.5rem;
 	&__heading {
 		font-size: $header-mobile;
 		margin-bottom: 2.5rem;
@@ -239,21 +238,26 @@
 			margin: 0 9.25rem 2.5rem;
 		}
 	}
-	&__container {
+	&__mobile {
+		display: flex;
+		justify-content: flex-start;
 		@include tablet {
-			display: flex;
-			flex-direction: row;
-			justify-content: flex-start;
-			margin-left: 100px;
-			margin-right: 100px;
+			margin-left: 90px;
+			margin-right: 90px;
 		}
 		@include desktop {
-			justify-content: center;
+			margin-left: 276px;
+			margin-right: 276px;
+			justify-content: flex-start;
 		}
 	}
-	// &__labels {
-	// 	width: 230px;
-	// }
+	&__container {
+		margin-left: 10px;
+		@include tablet {
+			margin-left: 0;
+		}
+	}
+
 	&__image {
 		margin-top: 25px;
 		width: 50px;
@@ -292,6 +296,7 @@
 			width: 466px;
 		}
 		@include desktop {
+			width: 780.88px;
 			height: 48px;
 			margin-bottom: 1.5rem;
 		}
@@ -324,9 +329,10 @@
 			width: 468px;
 			outline: none;
 		}
-		@include tablet {
+		@include desktop {
 			height: 96px;
 			outline: none;
+			width: 780.88px;
 		}
 		&:focus {
 			padding: 0;
@@ -356,18 +362,86 @@
 
 		@include tablet {
 			padding: 0.625rem 0.625rem;
-			width: 150px;
-		}
-
-		@include tablet {
-			padding: 0.625rem 0.625rem;
 			width: 160px;
+			display: block;
+			margin-left: 315px;
 			height: 48px;
 		}
 
 		@include desktop {
+			margin-right: 0;
+			margin-left: 630px;
+			display: inline-block;
 			margin-bottom: 1.5rem;
 			margin-top: 1.5rem;
 		}
+	}
+}
+section {
+	padding-left: 1rem;
+	padding-right: 1rem;
+	margin-top: 16x;
+	margin-bottom: 16px;
+
+	@include tablet {
+		margin-top: 32x;
+		margin-bottom: 32px;
+	}
+	@include desktop {
+		margin-top: 48px;
+		margin-bottom: 40px;
+	}
+}
+
+.comments {
+	width: 100%;
+	@include tablet {
+		width: 75.5%;
+		margin-left: 90px;
+		margin-right: 90px;
+	}
+	@include desktop {
+		width: 61%;
+		margin-left: 276px;
+		margin-right: 276px;
+	}
+	&__list {
+		list-style-type: none;
+		padding: 0;
+		border-bottom: 1px solid #e1e1e1;
+	}
+	&__li {
+		margin-left: 0;
+		display: flex;
+	}
+
+	&__image {
+		margin-top: 18px;
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		display: inline-block;
+	}
+	&__container {
+		margin-left: 10px;
+	}
+	&__top {
+		display: flex;
+		justify-content: space-between;
+		@include tablet {
+			justify-content: flex-start;
+		}
+	}
+	&__user {
+		font-weight: 600;
+	}
+	&__date {
+		color: $color-silver;
+		@include tablet {
+			margin-left: 10px;
+		}
+	}
+	&__comment {
+		margin-top: 0;
 	}
 }

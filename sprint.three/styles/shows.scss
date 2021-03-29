@@ -24,8 +24,6 @@
 		display: flex;
 		flex-direction: column;
 		color: $color-white;
-		padding-left: 1rem;
-		padding-right: 1rem;
 	}
 
 	&__hero {
@@ -53,6 +51,8 @@
 		margin-top: 0;
 		margin-bottom: 0;
 		font-weight: 700;
+		padding-left: 1rem;
+		padding-right: 1rem;
 		@include tablet {
 			font-size: $third-header-tablet;
 			font-weight: 700;
@@ -65,6 +65,8 @@
 	&__heading {
 		font-size: $second-header-tablet;
 		font-weight: 700;
+		padding-left: 1rem;
+		padding-right: 1rem;
 		@include tablet {
 			font-size: $header-tablet;
 			width: 90%;
@@ -81,7 +83,8 @@
 		width: 288px;
 		height: 100px;
 		margin-top: 32px;
-		padding: 0;
+		padding-left: 1rem;
+		padding-right: 1rem;
 		@include tablet {
 			width: 420px;
 			height: 146px;
@@ -97,7 +100,7 @@
 	}
 
 	&__overlay::after {
-		content: "";
+		content: " ";
 		display: block;
 		background-color: $color-black;
 		opacity: 0.5;
@@ -132,10 +135,11 @@
 	@include desktop {
 		padding: 3rem 11.25rem;
 		display: flex;
-		flex-direction: row;
+		flex-direction: column;
 		justify-content: space-between;
-		width: 70%;
-		margin: 0 auto;
+		align-items: flex-start;
+		width: 90%;
+		padding-right: 0;
 	}
 
 	&__heading {
@@ -174,18 +178,25 @@
 			width: 736px;
 		}
 	}
-	&__first,
-	&__second,
-	&__third,
-	&__fourth,
-	&__fifth,
-	&__sixth {
+	&__first {
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
+		width: 288px;
 		padding-top: 2rem;
 		padding-bottom: 1rem;
+		border-bottom: 1px solid $color-silver;
+
 		@include tablet {
+			width: 99%;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			padding-bottom: 0;
+			border-bottom: 1px solid $color-silver;
+		}
+		@include desktop {
+			width: 60%;
 			display: flex;
 			flex-direction: row;
 			justify-content: space-between;

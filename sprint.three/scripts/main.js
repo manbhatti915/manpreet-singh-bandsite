@@ -5,49 +5,51 @@ const apiUrl = "https://project-1-api.herokuapp.com";
 const apiEndpoint = "/comments";
 console.log(apiUrl + apiEndpoint + apiKey);
 
-const commentSection = document.querySelector(".form__comments");
+const commentSection = document.querySelector(".comments");
 
 const image = "./assets/Images/Mohan-muruge.jpg";
 function newCommentsLi(commentData) {
 	commentData.forEach(function (listData) {
 		let commentsList = document.createElement("ul");
-		commentsList.classList.add("form__list");
+		commentsList.classList.add("comments__list");
 
 		//making new li under first list
 
 		let commentsListItem = document.createElement("li");
-		commentsListItem.classList.add("form__li");
+		commentsListItem.classList.add("comments__li");
 
 		//to make an image for the comments done by users
 
 		let userImage = document.createElement("img");
-		userImage.classList.add("form__image");
+		userImage.classList.add("comments__image");
 		userImage.setAttribute("src", image);
 
 		let commentsContainer = document.createElement("div");
-		commentsContainer.classList.add("form__container");
+		commentsContainer.classList.add("comments__container");
+
+		let topContainer = document.createElement("div");
+		topContainer.classList.add("comments__top");
 
 		let pTagName = document.createElement("p");
-		pTagName.classList.add("form__user");
+		pTagName.classList.add("comments__user");
 		pTagName.innerText = listData.name;
 
 		let pTagDate = document.createElement("p");
-		pTagDate.classList.add("form__date");
+		pTagDate.classList.add("comments__date");
 		let currentDate = new Date(listData.timestamp);
 		pTagDate.innerText = currentDate.toLocaleDateString();
 
 		let pTagComment = document.createElement("p");
-		pTagComment.classList.add("form__comment");
+		pTagComment.classList.add("comments__comment");
 		pTagComment.innerText = listData.comment;
 
 		commentsList.appendChild(commentsListItem);
 		commentsListItem.appendChild(userImage);
 		commentsListItem.appendChild(commentsContainer);
-
-		commentsContainer.appendChild(pTagName);
-		commentsContainer.appendChild(pTagDate);
+		topContainer.appendChild(pTagName);
+		topContainer.appendChild(pTagDate);
+		commentsContainer.appendChild(topContainer);
 		commentsContainer.appendChild(pTagComment);
-
 		commentSection.appendChild(commentsList);
 	});
 }
@@ -60,7 +62,7 @@ function axiosComments() {
 			response.data.sort(function (a, b) {
 				return b.timestamp - a.timestamp;
 			});
-			// console.log(axiosNewComments);
+
 			newCommentsLi(axiosNewComments);
 		})
 		.catch((error) => {
@@ -72,7 +74,7 @@ axiosComments();
 const formSubmit = document.querySelector(".form__container");
 formSubmit.addEventListener("submit", function (e) {
 	e.preventDefault();
-	commentSection.innerHTML = " ";
+	commentSection.innerHTML = "";
 	let allComments = document.querySelectorAll(".form__list");
 	allComments.forEach((singleComment) => {
 		singleComment.remove();
